@@ -1,3 +1,4 @@
+<!-- profile.html -->
 <html>
 <head>
   <title>Watch Party</title>
@@ -20,11 +21,14 @@
     <h2>Welcome to Watch Party!</h2>
     <div class="profileDetails">
       <label  class="username" for="username">Your username is: </label>
-      <input  class="username" name="username" class="mono" value="{{ user.name }}">
-      <button class="username">Update</button>
+      <!-- 用戶名更新 -->
+      <input id="usernameInput" class="username" name="username" value="{{ user.name }}">
+      <button onclick="updateUsername()">Update Username</button>
       <label  class="password" for="password">Your password is: </label>
-      <input  class="password" name="password" class="mono" value="{{ user.password }}">
-      <button class="password">Update</button>
+      <!-- 密碼更新 -->
+      <input id="passwordInput" class="password" name="password" type="password" value="{{ user.password }}">
+      <button onclick="updatePassword()">Update Password</button>
+      
     </div>
     <p>
       Your user ID and API Key are available on every page as the javascript variables
