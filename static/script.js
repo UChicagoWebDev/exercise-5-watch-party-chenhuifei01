@@ -81,7 +81,7 @@ function getMessages() {
 // Automatically poll for new messages on a regular interval.
 function startMessagePolling() {
   getMessages(); // Fetch immediately
-  setInterval(getMessages, 5000); // Fetch every 5 seconds
+  setInterval(getMessages, 100); // Fetch every 5 seconds
 }
 
 
@@ -164,3 +164,5 @@ function updatePassword() {
   })
   .catch(error => console.error('Error updating password:', error));
 }
+
+
